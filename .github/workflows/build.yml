@@ -13,18 +13,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with: 
            cypress:run:Chrome: npm run cypress:run:Chrome
-
-      - name: Create Reports Directory
-        run: mkdir -p cypress/reports/mochawesome      
-
-      - name: Generate Mochawesome Report
-        run: npm run generate:report
-
-      - name: Save Mochawesome Report as Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: mochawesome-report
-          path: cypress/reports/mochawesome     
           
 
 
@@ -42,16 +30,4 @@ jobs:
         uses: cypress-io/github-action@v5
         with: 
            cypress:run:Firefox: npm run  cypress:run:Firefox
-
-      - name: Create Reports Directory
-        run: mkdir -p cypress/reports/mochawesome      
-
-      - name: Generate Mochawesome Report
-        run: npm run generate:report
-
-      - name: Save Mochawesome Report as Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: mochawesome-report
-          path: cypress/reports/mochawesome     
          
