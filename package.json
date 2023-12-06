@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "npx cypress open",
-    "cypress:run:Chrome": "npx cypress run",
-    "cypress:run:Firefox": "npx cypress run"
+    "cypress:run:Chrome": "npx cypress run --browser chrome",
+    "cypress:run:Firefox": "npx cypress run --browser firefox --headed"
   },
   "author": "Akshay",
   "license": "ISC",
