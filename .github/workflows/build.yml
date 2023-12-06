@@ -1,4 +1,5 @@
 name: Parallel Test Execution
+
 on: [push, pull_request]
 
 jobs:
