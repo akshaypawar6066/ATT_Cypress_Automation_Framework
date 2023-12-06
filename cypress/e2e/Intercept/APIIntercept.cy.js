@@ -23,7 +23,7 @@ describe('Intercept In Cypress', () => {
     })
 
 
-    it.skip('Test API With simple intercept and create stub for response', () => {
+    it('Test API With simple intercept and create stub for response', () => {
         cy.visit('https://dummyapi.io/explorer');
         cy.intercept(
             {
@@ -47,7 +47,7 @@ describe('Intercept In Cypress', () => {
     })
 
 
-    it.skip('Test API With simple intercept and create stub for response using fixture file', () => {
+    it('Test API With simple intercept and create stub for response using fixture file', () => {
         cy.visit('https://dummyapi.io/explorer');
         cy.intercept(
             {
