@@ -7,7 +7,7 @@
     "cypress:open": "npx cypress open",
     "cypress:run:Chrome": "npx cypress run --browser chrome",
     "cypress:run:Firefox": "npx cypress run --browser firefox",
-    "generate:report": "npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/report.json && npx marge cypress/reports/mochawesome/report.json -o cypress/reports/mochawesome"
+    "generate:report": "mkdir -p cypress/reports/mochawesome && npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/report.json && npx marge cypress/reports/mochawesome/report.json -o cypress/reports/mochawesome"
 
 
   },
