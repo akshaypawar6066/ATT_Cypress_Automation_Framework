@@ -1,7 +1,7 @@
 name: Parallel Test Execution
 on: [push, pull_request]
 jobs:
-  cypress-run:
+  cypress-run-Chrome:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,7 +17,7 @@ jobs:
 
 
 
-  cypress-firefox:
+  cypress-run-FireFox:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

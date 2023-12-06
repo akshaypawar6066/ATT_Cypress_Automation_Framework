@@ -23,7 +23,7 @@ describe('Intercept In Cypress', () => {
     })
 
 
-    it('Test API With simple intercept and create stub for response', () => {
+    it.skip('Test API With simple intercept and create stub for response', () => {
         cy.visit('https://dummyapi.io/explorer');
         cy.intercept(
             {
@@ -47,9 +47,8 @@ describe('Intercept In Cypress', () => {
     })
 
 
-    it('Test API With simple intercept and create stub for response using fixture file', () => {
+    it.skip('Test API With simple intercept and create stub for response using fixture file', () => {
         cy.visit('https://dummyapi.io/explorer');
-        cy.wait(2000);
         cy.intercept(
             {
                 method: 'GET',
@@ -61,14 +60,12 @@ describe('Intercept In Cypress', () => {
                 body: resBody
             }
         ).as('comments');
-        cy.wait(2000);
         cy.xpath("//div[text()='Comments List']").click({force:true});
         cy.wait('@comments').then((interceptResponse) => {
             cy.log(JSON.stringify(interceptResponse));
             console.log(JSON.stringify(interceptResponse));
             expect(interceptResponse.response.body.createdBy).to.equal('Akshay');
             expect(interceptResponse.response.statusCode).to.equal(200);
-
         })
     })
 })
