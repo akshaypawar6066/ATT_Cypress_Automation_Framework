@@ -64,7 +64,7 @@ describe('Intercept In Cypress', () => {
         cy.wait('@comments').then((interceptResponse) => {
             cy.log(JSON.stringify(interceptResponse));
             console.log(JSON.stringify(interceptResponse));
-            expect(interceptResponse.response.body.createdBy).to.equal('Akshay');
+            expect(interceptResponse.response.body.createdBy).to.eq('Akshay');
             expect(interceptResponse.response.statusCode).to.equal(200);
         })
     })
