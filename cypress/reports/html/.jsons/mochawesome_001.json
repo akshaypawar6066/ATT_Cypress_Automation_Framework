@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-06T20:58:20.975Z",
+    "end": "2023-12-06T20:58:29.972Z",
+    "duration": 8997,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ceb2d4c2-5648-4c5d-a2cd-23079db982bf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Books.cy.js",
+      "file": "cypress\\e2e\\Books.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4bf2ed92-38e5-4064-8cc4-83ed62856f38",
+          "title": "Handling Automation Store Website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Total And Out_of Stock Books Count",
+              "fullTitle": "Handling Automation Store Website Verify Total And Out_of Stock Books Count",
+              "timedOut": null,
+              "duration": 5987,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToApplication();\n//cy.get(\"a[href*='https://automationteststore.com/index.php?rt=product/category&path']\").contains(\"Books\").click();\ncy.clickOnBooksTab();\n//cy.get(\".thumbnails.grid.row.list-inline>div\").should('have.length', 4)\n//cy.get(\".thumbnails.grid.row.list-inline>div\").find(\"div .pricetag.jumbotron\").find(\"span\").should(\"have.length\", 2)\ncy.verifyCountOfTotalBooks(4);\ncy.verifyCountOfOutOfStockBooks(2);",
+              "err": {},
+              "uuid": "fbac333b-3286-492c-ba3a-955b94adbc1d",
+              "parentUUID": "4bf2ed92-38e5-4064-8cc4-83ed62856f38",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fbac333b-3286-492c-ba3a-955b94adbc1d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5987,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Automation_Store_Website_Reports",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

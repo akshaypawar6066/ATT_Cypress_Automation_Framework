@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-06T20:58:05.530Z",
+    "end": "2023-12-06T20:58:18.460Z",
+    "duration": 12930,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4db2c03-de2d-49d0-8725-6c022050f1ec",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AddToCart.cy.js",
+      "file": "cypress\\e2e\\AddToCart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6fcb8448-7a17-456d-b075-4119a08789f3",
+          "title": "Handling Automation Store Website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Product To Cart",
+              "fullTitle": "Handling Automation Store Website Add Product To Cart",
+              "timedOut": null,
+              "duration": 8233,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get(\"a[href*='https://automationteststore.com/index.php?rt=product/category&path']\").contains(\"Makeup\").click();\ncy.clickOnMakeupPage();\n/*cy.get(\".fixed>a\").each((product, index, productList) => {\n    if (product.text().includes('Lips')) {\n        cy.wrap(product).click();\n    }\n}); */\ncy.clickOnExpectedMakeupProductFromList(productData.productName);\n//cy.get(\".cart\").click()\ncy.clickOnAddToCartButton();\ncy.verifyProductAddedToCartOrNot();",
+              "err": {},
+              "uuid": "bc5dc2ba-3648-4862-bcc3-9a2553046305",
+              "parentUUID": "6fcb8448-7a17-456d-b075-4119a08789f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs of product on makeup page",
+              "fullTitle": "Handling Automation Store Website Logs of product on makeup page",
+              "timedOut": null,
+              "duration": 1974,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get(\"a[href*='https://automationteststore.com/index.php?rt=product/category&path']\").contains(\"Makeup\").click();\ncy.clickOnMakeupPage();\n/*cy.get(\".fixed>a\").each((product, index, productList) => {\n    cy.log(`Index: ${index} text: ${product.text()}`);\n})\n*/\ncy.logMakeupProductNamesFromList();",
+              "err": {},
+              "uuid": "d27f0727-e74f-45cd-a44c-c76466dc664e",
+              "parentUUID": "6fcb8448-7a17-456d-b075-4119a08789f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc5dc2ba-3648-4862-bcc3-9a2553046305",
+            "d27f0727-e74f-45cd-a44c-c76466dc664e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10207,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Automation_Store_Website_Reports",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
