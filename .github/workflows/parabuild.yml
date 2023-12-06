@@ -12,8 +12,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
-          build: npm run build
-          start: npm start
+           cypress:run:Chrome: npm run cypress:run:Chrome
+          
 
 
 
@@ -28,5 +28,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
-          build: npm run build
-          start: npm start
+           cypress:run:Firefox: npm run  cypress:run:Firefox
+         
