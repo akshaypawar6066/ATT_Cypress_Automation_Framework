@@ -58,7 +58,7 @@ describe('Intercept In Cypress', () => {
             },
             {
                 statusCode: 200,
-                body:resBody
+                body:{ message: 'This is stubbed response', createdBy: 'Akshay' }
             }
         ).as('comments');
         cy.xpath("//div[text()='Comments List']").click();
