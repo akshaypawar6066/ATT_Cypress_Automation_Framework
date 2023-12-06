@@ -3,7 +3,7 @@ describe('Intercept In Cypress', () => {
     before('Getting Body for json response output', ()=>
     {
         cy.log('Fetching body for request:')
-       cy.fixture('Intercept.json').then((data)=>
+       cy.fixture('cypress/fixtures/Intercept.json').then((data)=>
        {
         resBody=data;
        })
