@@ -39,7 +39,8 @@ jobs:
         uses: cypress-io/github-action@v5
         with: 
            cypress:run:Firefox: npm run  cypress:run:Firefox
-                 - name: Generate Mochawesome Report
+           
+      - name: Generate Mochawesome Report
         run: npm run generate:report
 
       - name: Save Mochawesome Report as Artifact
