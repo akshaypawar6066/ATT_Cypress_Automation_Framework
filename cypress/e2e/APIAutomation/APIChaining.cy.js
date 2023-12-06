@@ -1,4 +1,3 @@
-const { describe } = require("mocha");
 
 describe('API Chanining in cypress', () => {
     let accessToken;
