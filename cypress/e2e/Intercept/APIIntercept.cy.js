@@ -1,6 +1,6 @@
 describe('Intercept In Cypress', () => {
    let resBody;
-    before('Getting Body', ()=>
+    before('Getting Body for json response output', ()=>
     {
         cy.log('Fetching body for request:')
        cy.fixture('intercept.json').then((data)=>
@@ -29,7 +29,6 @@ describe('Intercept In Cypress', () => {
             {
                 method: 'GET',
                 url: '/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10'
-
 
             },
             {
