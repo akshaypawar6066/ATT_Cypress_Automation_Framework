@@ -3,7 +3,7 @@ describe('Intercept In Cypress', () => {
     before('Getting Body for json response output', ()=>
     {
         cy.log('Fetching body for request:')
-       cy.fixture('Intercept').then((data)=>
+       cy.fixture('Intercept.json').then((data)=>
        {
         resBody=data;
        })
@@ -36,7 +36,7 @@ describe('Intercept In Cypress', () => {
                 body: { message: 'This is stubbed response', createdBy: 'Akshay' }
             }
         ).as('comments');
-        cy.xpath("//div[text()='Comments List']").click();
+        cy.xpath("//div[text()='Comments List']").click({force:true});
         cy.wait('@comments').then((interceptResponse) => {
             cy.log(JSON.stringify(interceptResponse));
             console.log(JSON.stringify(interceptResponse));
@@ -47,21 +47,22 @@ describe('Intercept In Cypress', () => {
     })
 
 
-    it('Test API With simple intercept and create stub for response using fixture', () => {
+    it('Test API With simple intercept and create stub for response using fixture file', () => {
         cy.visit('https://dummyapi.io/explorer');
+        cy.wait(2000);
         cy.intercept(
             {
                 method: 'GET',
                 url: '/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10'
 
-
             },
             {
                 statusCode: 200,
-                body:{ message: 'This is stubbed response', createdBy: 'Akshay' }
+                body: resBody
             }
         ).as('comments');
-        cy.xpath("//div[text()='Comments List']").click();
+        cy.wait(2000);
+        cy.xpath("//div[text()='Comments List']").click({force:true});
         cy.wait('@comments').then((interceptResponse) => {
             cy.log(JSON.stringify(interceptResponse));
             console.log(JSON.stringify(interceptResponse));
