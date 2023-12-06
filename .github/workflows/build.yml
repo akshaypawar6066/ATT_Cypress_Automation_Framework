@@ -12,7 +12,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
-           cypress:run:Chrome: npm run cypress:run:Chrome
+           cypress:run:Chrome: npm run cypress:run:Chrome --browser chrome
           
 
 
@@ -29,5 +29,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with: 
-           cypress:run:Firefox: npm run  cypress:run:Firefox
+           cypress:run:Firefox: npm run  cypress:run:Firefox --browser firefox
          
