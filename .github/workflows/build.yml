@@ -13,21 +13,24 @@ jobs:
         run: npm install
 
       - name: Cypress run
-        run: |
-          npm run cypress:run:Chrome -- --browser chrome
+        uses: cypress-io/github-action@v5
+        with:
+          cypress: 'npm run cypress:run:Chrome -- --browser chrome'
 
   cypress-run-FireFox:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: npm install
 
       - name: Cypress run
-        run: |
-          npm run cypress:run:Firefox -- --browser firefox
+        uses: cypress-io/github-action@v5
+        with:
+          cypress: 'npm run cypress:run:Firefox -- --browser firefox'
+
 
       - name: Cypress Test Report
         if: always()
