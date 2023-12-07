@@ -39,3 +39,5 @@ jobs:
       with:
         name: Mochawesome HTML Report
         path: cypress/reports/html     
+
+    chmod +x node_modules/.bin/cypress
