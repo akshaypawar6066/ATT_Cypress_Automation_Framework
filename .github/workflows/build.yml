@@ -17,8 +17,8 @@ jobs:
         with:
           cypress-Chrome: npm run cypress:run:Chrome'
           browser: chrome
-          
-       - name: Cypress Test Report
+
+      - name: Cypress Test Report
         if: always()
         uses: actions/upload-artifact@v3 
         with:
