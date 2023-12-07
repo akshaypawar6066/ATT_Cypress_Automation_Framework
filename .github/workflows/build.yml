@@ -17,6 +17,13 @@ jobs:
         with:
           cypress-Chrome: npm run cypress:run:Chrome'
           browser: chrome
+          
+       - name: Cypress Test Report
+        if: always()
+        uses: actions/upload-artifact@v3 
+        with:
+          name: Mochawesome HTML Report
+          path: cypress/reports/html         
 
   cypress-run-FireFox:
     runs-on: ubuntu-latest
@@ -32,8 +39,6 @@ jobs:
         with:
           cypress-Firefox: npm run cypress:run:Firefox
           browser: firefox
-
-
 
       - name: Cypress Test Report
         if: always()
