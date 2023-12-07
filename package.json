@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "cypress:run:Chrome": "npm run cypress:run -- --browser chrome",
-    "cypress:run:Firefox": "npm run cypress:run -- --browser firefox"
+    "cypress:open": "npx cypress open",
+    "cypress:run:Chrome": "npx cypress run --browser chrome",
+    "cypress:run:Firefox": "npx cypress run --browser firefox"
   },
   "author": "Akshay",
   "license": "ISC",

@@ -1,43 +1,39 @@
-name: Cypress Parallel execution
+name: Parallel Test Execution
 
 on: [push, pull_request]
 
 jobs:
-  cypress-chrome:
+  cypress-run-Chrome:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: |
+      - name: Install Dependencies
+         npm run cypress:run:Chrome -- --browser chrome
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        run: |
         npm install
 
-    - name: Run Cypress tests on Chrome
-      run: |
-        npm run cypress:run:Chrome -- --browser chrome
-
-  cypress-firefox:
+  cypress-run-FireFox:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: |
-        npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Run Cypress tests on Firefox
-      run: |
-        npm run cypress:run:Firefox -- --browser firefox
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        run: |
+         npm run cypress:run:Chrome -- --browser firefox
 
-    - name: Cypress Test Report
-      if: always()
-      uses: actions/upload-artifact@v3 
-      with:
-        name: Mochawesome HTML Report
-        path: cypress/reports/html     
-
-       chmod +x node_modules/.bin/cypress
+      - name: Cypress Test Report
+        if: always()
+        uses: actions/upload-artifact@v3 
+        with:
+         name: Mochawesome HTML Report
+         path: cypress/reports/html   
