@@ -6,7 +6,7 @@
   "scripts": {
     "cypress:open": "npx cypress open",
     "cypress:run:Chrome": "npx cypress run --browser chrome",
-    "cypress:run:Firefox": "npx cypress run --browser firefox --headed"
+    "cypress:run:Firefox": "npx cypress run --browser firefox"
   },
   "author": "Akshay",
   "license": "ISC",
