@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cypress-Chrome-Tests: npm run RunCypressTestsAsLocally --headed
+          cypress-Chrome-Tests: npm run RunCypressTestsAsLocally
           browser: chrome
 
       - name: Cypress Test Report
