@@ -1,3 +1,4 @@
+
 describe('Intercept In Cypress', () => {
    let resBody;
     before('Getting Body for json response output', ()=>
@@ -42,6 +43,7 @@ describe('Intercept In Cypress', () => {
             console.log(JSON.stringify(interceptResponse));
             expect(interceptResponse.response.body.createdBy).to.equal('Akshay');
             expect(interceptResponse.response.statusCode).to.equal(200);
+            expect(interceptResponse.response.body.message).to.equal('This is stubbed response');
 
         })
     })

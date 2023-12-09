@@ -27,6 +27,7 @@ module.exports = defineConfig({
       openMode:0      //Retries when running spec using UI mode of cypress   --->Default running one time--->after that retries count will run
      } , 
     
+    
     //video:true, 
   },
 });

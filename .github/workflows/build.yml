@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cypress-Chrome: npm run cypress:run:Chrome'
+          cypress-Chrome-Tests: npm run RunCypressTests
           browser: chrome
 
       - name: Cypress Test Report
@@ -37,7 +37,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cypress-Firefox: npm run cypress:run:Firefox
+          cypress-Firefox-Tests: npm run RunCypressTests
           browser: firefox
 
       - name: Cypress Test Report
