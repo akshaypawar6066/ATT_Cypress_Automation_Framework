@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "npx cypress open",  
-    "RunCypressTestsAsLocally":"npx cypress run",
+    "RunCypressTestsAsLocally":"npx cypress run --headed",
     "RunCypressTestsAsDependancy":"cypress run",
     "RunTests":"npm run RunCypressTestsAsDependancy"
        
