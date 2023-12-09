@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cypress-Chrome-Tests: npm run RunCypressTests
+          cypress-Chrome-Tests: npm run RunCypressTestsAsLocally
           browser: chrome
 
       - name: Cypress Test Report
@@ -37,7 +37,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          cypress-Firefox-Tests: 'npm run cy:run -- --browser firefox'
+          cypress-Firefox-Tests: npm run RunCypressTestAsDependancy
+          browser: firefox
 
       - name: Cypress Test Report
         if: always()

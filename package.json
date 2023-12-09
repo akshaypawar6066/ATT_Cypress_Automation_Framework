@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "npx cypress open",  
-    "RunCypressTests":"npx cypress run",
-    "runTest":"npm run RunCypressTests",
-    "cy:run":"cypress run"    
+    "RunCypressTestsAsLocally":"npx cypress run",
+    "RunCypressTestsAsDependancy":"cypress run",
+    "RunTests":"npm run RunCypressTestsAsDependancy"
+       
   },
   "author": "Akshay",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "eslint": "^8.54.0",
     "prettier": "^3.1.0"
   },
+  
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.7.0",
     "cypress-xpath": "^2.0.1"
