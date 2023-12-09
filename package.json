@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "npx cypress open",
+    "cypress:open": "npx cypress open",  
     "RunCypressTests":"npx cypress run",
-    "runTest":"npm run RunCypressTests"
+    "runTest":"npm run RunCypressTests",
+    "cy:run":"cypress run"    
   },
   "author": "Akshay",
   "license": "ISC",
