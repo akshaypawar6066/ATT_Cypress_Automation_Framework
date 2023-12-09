@@ -36,8 +36,8 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
-        with:
-          cypress-Firefox-Tests: npm run cy:run --browser firefox
+        with:'
+          cypress-Firefox-Tests: 'npm run cy:run --browser firefox'
 
       - name: Cypress Test Report
         if: always()
